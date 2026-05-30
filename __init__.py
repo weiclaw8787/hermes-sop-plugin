@@ -38,8 +38,17 @@ def handle_search_sop(params, **kwargs):
             "error": "missing query"
         })
 
-    api_url = os.getenv("SOP_API_URL", "").strip()
-    api_key = os.getenv("SOP_API_KEY", "").strip()
+api_url = (
+    os.getenv("SOP_API_URL")
+    or os.getenv("HERMES_SOP_API_URL")
+    or "https://script.google.com/macros/s/AKfycbxzwQK7gfwqbRn0vuBmrWg37qrdzNvXoQSF4jaAyH_h5gMedjaVM32B1qxn2XjDjOex/exec"
+).strip()
+
+api_key = (
+    os.getenv("SOP_API_KEY")
+    or os.getenv("HERMES_SOP_API_KEY")
+    or "sop_nchu0241"
+).strip()
 
     if not api_url:
         return _json({
