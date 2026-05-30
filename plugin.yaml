@@ -1,0 +1,12 @@
+name: hermes-sop-plugin
+version: "1.0.0"
+description: SOP search plugin for querying a Google Apps Script SOP knowledge base.
+provides_tools:
+  - search_sop
+requires_env:
+  - name: SOP_API_URL
+    description: Google Apps Script Web App URL ending with /exec
+    secret: false
+  - name: SOP_API_KEY
+    description: API key for the SOP Google Apps Script endpoint
+    secret: true
