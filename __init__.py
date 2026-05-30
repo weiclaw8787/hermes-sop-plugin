@@ -52,14 +52,16 @@ api_key = (
 
     if not api_url:
         return _json({
-            "ok": False,
-            "error": "SOP_API_URL is not configured"
+    "ok": False,
+    "plugin_version": "debug-v3-20260530",
+    "error": "SOP_API_URL is not configured"
         })
 
     if not api_key:
         return _json({
-            "ok": False,
-            "error": "SOP_API_KEY is not configured"
+    "ok": False,
+    "plugin_version": "debug-v3-20260530",
+    "error": "SOP_API_URL is not configured"
         })
 
     try:
